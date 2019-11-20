@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Train Scheduler</title>
+</head>
+
+<body>
+    <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Train Scheduler Application
+                </h1>
+                <h2 class="subtitle">
+                    Created using Bulma CSS Framework and Vanilla Javascript by Alexander Elkhatib
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column">
+                <table class="table is-hoverable">
+                    <thead>
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>Frequency</th>
+                        <th>Next Arrival</th>
+                        <th>Minutes Away</th>
+                    </thead>
+                    <tbody id="trainTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <form id="trainForm">
+                    <div class="field">
+                        <label class="label">Train Name</label>
+                        <div class="control">
+                            <input class="input" id="train-name" type="text" placeholder="Enter Train Name" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Destination</label>
+                        <div class="control">
+                            <input class="input" id="destination" type="text" placeholder="Enter Train Destination" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">First Train Time (HH:MM - Military Time)</label>
+                        <div class="control">
+                            <input class="input" id="train-time" type="text" placeholder="Enter First Train Time" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Frequency (in minutes)</label>
+                        <div class="control">
+                            <input class="input" id="frequency" type="number" placeholder="Enter Train Frequency" />
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button id="submitButton" class="button is-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>

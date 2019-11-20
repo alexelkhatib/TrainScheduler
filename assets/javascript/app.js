@@ -93,7 +93,7 @@ document
 
 function saveTrain(trainName, destination, frequency, startTime) {
     var newTrain = trainDB.push();
-    newTrain.set({ trainName: trainName, destination: destination, frequency: frequency, startTime: startTime })
+    newTrain.set({trainName: trainName, destination: destination, frequency: frequency, startTime: startTime})
 }
 //short code for the input values
 function getInputVal(id) {
